@@ -1219,7 +1219,7 @@ namespace Roslynator
                 && namedTypeSymbol.TypeArguments[0] == typeArgument;
         }
 
-        //TODO: make public this INamedTypeSymbol typeSymbol, Func<TSymbol, bool> predicate = null,bool includeBaseTypes = false
+        //TODO: make public FindMember<TSymbol>(INamedTypeSymbol, Func<TSymbol, bool>, bool)
         internal static TSymbol FindMember<TSymbol>(
             this INamedTypeSymbol typeSymbol,
             Func<TSymbol, bool> predicate = null,
@@ -1272,7 +1272,7 @@ namespace Roslynator
             return default;
         }
 
-        //TODO: make public this INamedTypeSymbol typeSymbol, Func<INamedTypeSymbol, bool> predicate = null, bool includeBaseTypes = false)
+        //TODO: make public FindTypeMember(INamedTypeSymbol, Func<INamedTypeSymbol, bool>, bool)
         internal static INamedTypeSymbol FindTypeMember(
             this INamedTypeSymbol typeSymbol,
             Func<INamedTypeSymbol, bool> predicate = null,
