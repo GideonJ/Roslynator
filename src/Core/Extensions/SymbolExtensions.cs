@@ -365,7 +365,7 @@ namespace Roslynator
             return null;
         }
 
-        //TODO: make public
+        //TODO: make public GetAttribute(this ISymbol symbol, in MetadataName metadataName)
         internal static AttributeData GetAttribute(this ISymbol symbol, in MetadataName metadataName)
         {
             if (symbol == null)
@@ -418,13 +418,13 @@ namespace Roslynator
             return false;
         }
 
-        //TODO: make public
+        //TODO: make public HasAttribute(this ISymbol symbol, in MetadataName metadataName)
         internal static bool HasAttribute(this ISymbol symbol, in MetadataName metadataName)
         {
             return GetAttribute(symbol, metadataName) != null;
         }
 
-        //TODO: make public
+        //TODO: make public HasAttribute(this ITypeSymbol typeSymbol, in MetadataName metadataName, bool includeBaseTypes)
         internal static bool HasAttribute(this ITypeSymbol typeSymbol, in MetadataName metadataName, bool includeBaseTypes)
         {
             if (!includeBaseTypes)
@@ -539,7 +539,7 @@ namespace Roslynator
             return true;
         }
 
-        //TODO: make public
+        //TODO: make public GetVisibility(ISymbol)
         internal static Visibility GetVisibility(this ISymbol symbol)
         {
             var visibility = Visibility.Public;
@@ -591,7 +591,7 @@ namespace Roslynator
         #endregion ISymbol
 
         #region IAssemblySymbol
-        //TODO: make public
+        //TODO: make public GetTypes(this IAssemblySymbol assemblySymbol, Func<INamedTypeSymbol, bool> predicate = null)
         internal static ImmutableArray<INamedTypeSymbol> GetTypes(this IAssemblySymbol assemblySymbol, Func<INamedTypeSymbol, bool> predicate = null)
         {
             ImmutableArray<INamedTypeSymbol>.Builder builder = ImmutableArray.CreateBuilder<INamedTypeSymbol>();
@@ -1203,7 +1203,7 @@ namespace Roslynator
                 && namedTypeSymbol.TypeArguments[0] == typeArgument;
         }
 
-        //TODO: make public
+        //TODO: make public this INamedTypeSymbol typeSymbol, Func<TSymbol, bool> predicate = null,bool includeBaseTypes = false
         internal static TSymbol FindMember<TSymbol>(
             this INamedTypeSymbol typeSymbol,
             Func<TSymbol, bool> predicate = null,
@@ -1256,7 +1256,7 @@ namespace Roslynator
             return default;
         }
 
-        //TODO: make public
+        //TODO: make public this INamedTypeSymbol typeSymbol, Func<INamedTypeSymbol, bool> predicate = null, bool includeBaseTypes = false)
         internal static INamedTypeSymbol FindTypeMember(
             this INamedTypeSymbol typeSymbol,
             Func<INamedTypeSymbol, bool> predicate = null,
@@ -1571,7 +1571,7 @@ namespace Roslynator
             return false;
         }
 
-        //TODO: make public
+        //TODO: make public Implements(this ITypeSymbol typeSymbol, in MetadataName metadataName, bool allInterfaces = false)
         internal static bool Implements(this ITypeSymbol typeSymbol, in MetadataName metadataName, bool allInterfaces = false)
         {
             if (typeSymbol == null)
@@ -1706,7 +1706,7 @@ namespace Roslynator
             return false;
         }
 
-        //TODO: make public
+        //TODO: make public InheritsFrom(this ITypeSymbol type, in MetadataName metadataName, bool includeInterfaces = false)
         internal static bool InheritsFrom(this ITypeSymbol type, in MetadataName metadataName, bool includeInterfaces = false)
         {
             if (type == null)
@@ -1750,7 +1750,7 @@ namespace Roslynator
                 || InheritsFrom(type, baseType, includeInterfaces);
         }
 
-        //TODO: make public
+        //TODO: make public EqualsOrInheritsFrom(this ITypeSymbol type, in MetadataName metadataName, bool includeInterfaces = false)
         internal static bool EqualsOrInheritsFrom(this ITypeSymbol type, in MetadataName metadataName, bool includeInterfaces = false)
         {
             if (type == null)

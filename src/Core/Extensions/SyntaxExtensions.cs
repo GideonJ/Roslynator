@@ -250,7 +250,7 @@ namespace Roslynator
             }
         }
 
-        //TODO: make public
+        //TODO: make public GetTrailingTrivia<TNode>(SeparatedSyntaxList<TNode>)
         internal static SyntaxTriviaList GetTrailingTrivia<TNode>(this SeparatedSyntaxList<TNode> list) where TNode : SyntaxNode
         {
             int count = list.Count;

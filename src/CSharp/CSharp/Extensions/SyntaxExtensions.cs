@@ -426,7 +426,7 @@ namespace Roslynator.CSharp
         #endregion DestructorDeclarationSyntax
 
         #region DirectiveTriviaSyntax
-        //TODO: make public
+        //TODO: make public GetNextRelatedDirective(DirectiveTriviaSyntax)
         internal static DirectiveTriviaSyntax GetNextRelatedDirective(this DirectiveTriviaSyntax directiveTrivia)
         {
             DirectiveTriviaSyntax d = directiveTrivia;
@@ -1776,7 +1776,7 @@ namespace Roslynator.CSharp
             return ReplaceRange(list, index, count, Empty.ReadOnlyList<TNode>());
         }
 
-        //TODO: make public
+        //TODO: make public TrimTrivia<TNode>(SeparatedSyntaxList<TNode>)
         internal static SeparatedSyntaxList<TNode> TrimTrivia<TNode>(this SeparatedSyntaxList<TNode> list) where TNode : SyntaxNode
         {
             int count = list.Count;
@@ -2336,7 +2336,7 @@ namespace Roslynator.CSharp
             return null;
         }
 
-        //TODO: make public
+        //TODO: make public TrimTrivia<TNode>(SyntaxList<TNode>)
         internal static SyntaxList<TNode> TrimTrivia<TNode>(this SyntaxList<TNode> list) where TNode : SyntaxNode
         {
             int count = list.Count;
@@ -3164,7 +3164,7 @@ namespace Roslynator.CSharp
             return ContainsUnbalancedIfElseDirectives(node, node.FullSpan);
         }
 
-        //TODO: make public
+        //TODO: make public ContainsUnbalancedIfElseDirectives(SyntaxNode, TextSpan)
         internal static bool ContainsUnbalancedIfElseDirectives(this SyntaxNode node, TextSpan span)
         {
             if (node == null)
@@ -3209,7 +3209,7 @@ namespace Roslynator.CSharp
             return false;
         }
 
-        //TODO: make public
+        //TODO: make public GetFirstDirective(SyntaxNode, TextSpan, Func<DirectiveTriviaSyntax, bool>)
         internal static DirectiveTriviaSyntax GetFirstDirective(this SyntaxNode node, TextSpan span, Func<DirectiveTriviaSyntax, bool> predicate = null)
         {
             DirectiveTriviaSyntax directive = node.GetFirstDirective(predicate);

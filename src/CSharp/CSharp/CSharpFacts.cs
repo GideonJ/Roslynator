@@ -779,7 +779,7 @@ namespace Roslynator.CSharp
             }
         }
 
-        //TODO: make public
+        //TODO: make public CSharpFacts.IsStatement(SyntaxKind kind)
         /// <summary>
         /// Returns true if a syntax of the specified kind is a statement (which includes <see cref="SyntaxKind.Block"/>).
         /// </summary>
