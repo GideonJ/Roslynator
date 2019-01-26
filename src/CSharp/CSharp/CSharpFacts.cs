@@ -779,6 +779,21 @@ namespace Roslynator.CSharp
             }
         }
 
+        //TODO: Y make public IsIfElseDirective(SyntaxKind kind)
+        internal static bool IsIfElseDirective(SyntaxKind kind)
+        {
+            switch (kind)
+            {
+                case SyntaxKind.IfDirectiveTrivia:
+                case SyntaxKind.ElseDirectiveTrivia:
+                case SyntaxKind.ElifDirectiveTrivia:
+                case SyntaxKind.EndIfDirectiveTrivia:
+                    return true;
+                default:
+                    return false;
+            }
+        }
+
         //TODO: make public CSharpFacts.IsStatement(SyntaxKind kind)
         /// <summary>
         /// Returns true if a syntax of the specified kind is a statement (which includes <see cref="SyntaxKind.Block"/>).
