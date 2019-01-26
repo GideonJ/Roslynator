@@ -613,7 +613,7 @@ namespace Roslynator
         #endregion ISymbol
 
         #region IAssemblySymbol
-        //TODO: make public GetTypes(this IAssemblySymbol assemblySymbol, Func<INamedTypeSymbol, bool> predicate = null)
+        //XTODO: make public GetTypes(this IAssemblySymbol assemblySymbol, Func<INamedTypeSymbol, bool> predicate = null)
         internal static ImmutableArray<INamedTypeSymbol> GetTypes(this IAssemblySymbol assemblySymbol, Func<INamedTypeSymbol, bool> predicate = null)
         {
             ImmutableArray<INamedTypeSymbol>.Builder builder = ImmutableArray.CreateBuilder<INamedTypeSymbol>();
@@ -1225,7 +1225,7 @@ namespace Roslynator
                 && namedTypeSymbol.TypeArguments[0] == typeArgument;
         }
 
-        //TODO: make public FindMember<TSymbol>(INamedTypeSymbol, Func<TSymbol, bool>, bool)
+        //XTODO: make public FindMember<TSymbol>(INamedTypeSymbol, Func<TSymbol, bool>, bool)
         internal static TSymbol FindMember<TSymbol>(
             this INamedTypeSymbol typeSymbol,
             Func<TSymbol, bool> predicate = null,
@@ -1278,7 +1278,7 @@ namespace Roslynator
             return default;
         }
 
-        //TODO: make public FindTypeMember(INamedTypeSymbol, Func<INamedTypeSymbol, bool>, bool)
+        //XTODO: make public FindTypeMember(INamedTypeSymbol, Func<INamedTypeSymbol, bool>, bool)
         internal static INamedTypeSymbol FindTypeMember(
             this INamedTypeSymbol typeSymbol,
             Func<INamedTypeSymbol, bool> predicate = null,

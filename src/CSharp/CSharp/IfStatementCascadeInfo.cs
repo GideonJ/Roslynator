@@ -6,7 +6,6 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace Roslynator.CSharp
 {
-    //TODO: make public IfStatementCascadeInfo
     internal readonly struct IfStatementCascadeInfo : IEquatable<IfStatementCascadeInfo>
     {
         public IfStatementCascadeInfo(IfStatementSyntax ifStatement)

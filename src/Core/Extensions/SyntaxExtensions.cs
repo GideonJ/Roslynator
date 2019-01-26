@@ -201,7 +201,7 @@ namespace Roslynator
             }
         }
 
-        //TODO: make public GetTrailingSeparator<TNode>(SeparatedSyntaxList<TNode>)
+        //TODO: Y make public GetTrailingSeparator<TNode>(SeparatedSyntaxList<TNode>)
         internal static SyntaxToken GetTrailingSeparator<TNode>(this SeparatedSyntaxList<TNode> list) where TNode : SyntaxNode
         {
             int count = list.Count;
@@ -215,7 +215,7 @@ namespace Roslynator
             return default;
         }
 
-        //TODO: make public HasTrailingSeparator<TNode>(SeparatedSyntaxList<TNode>)
+        //TODO: Y make public HasTrailingSeparator<TNode>(SeparatedSyntaxList<TNode>)
         internal static bool HasTrailingSeparator<TNode>(this SeparatedSyntaxList<TNode> list) where TNode : SyntaxNode
         {
             int count = list.Count;
@@ -224,7 +224,7 @@ namespace Roslynator
                 && count == list.SeparatorCount;
         }
 
-        //TODO: make public ToString(SeparatedSyntaxList<TNode>, TextSpan)
+        //XTODO: make public ToString(SeparatedSyntaxList<TNode>, TextSpan)
         internal static string ToString<TNode>(this SeparatedSyntaxList<TNode> list, TextSpan span) where TNode : SyntaxNode
         {
             TextSpan listFullSpan = list.FullSpan;
@@ -250,7 +250,7 @@ namespace Roslynator
             }
         }
 
-        //TODO: make public GetTrailingTrivia<TNode>(SeparatedSyntaxList<TNode>)
+        //XTODO: make public GetTrailingTrivia<TNode>(SeparatedSyntaxList<TNode>)
         internal static SyntaxTriviaList GetTrailingTrivia<TNode>(this SeparatedSyntaxList<TNode> list) where TNode : SyntaxNode
         {
             int count = list.Count;
@@ -492,7 +492,7 @@ namespace Roslynator
             }
         }
 
-        //TODO: make public ToString(SyntaxList<TNode>, TextSpan)
+        //XTODO: make public ToString(SyntaxList<TNode>, TextSpan)
         internal static string ToString<TNode>(this SyntaxList<TNode> list, TextSpan span) where TNode : SyntaxNode
         {
             TextSpan listFullSpan = list.FullSpan;
@@ -784,7 +784,7 @@ namespace Roslynator
             return GetParent(node, ascendOutOfTrivia: ascendOutOfTrivia)?.FirstAncestorOrSelf(predicate, ascendOutOfTrivia: ascendOutOfTrivia);
         }
 
-        //TODO: make public ToString(SyntaxNode, TextSpan)
+        //XTODO: make public ToString(SyntaxNode, TextSpan)
         internal static string ToString(this SyntaxNode node, TextSpan span)
         {
             if (node == null)
@@ -1205,7 +1205,7 @@ namespace Roslynator
             return TextSpan.FromBounds(token.Span.End, token.FullSpan.End);
         }
 
-        //TODO: make public ToString(SyntaxToken, TextSpan)
+        //XTODO: make public ToString(SyntaxToken, TextSpan)
         internal static string ToString(this SyntaxToken token, TextSpan span)
         {
             TextSpan tokenFullSpan = token.FullSpan;
@@ -1396,7 +1396,7 @@ namespace Roslynator
             return false;
         }
 
-        //TODO: make public GetContainingList(SyntaxTrivia)
+        //XTODO: make public GetContainingList(SyntaxTrivia)
         internal static SyntaxTriviaList GetContainingList(this SyntaxTrivia trivia)
         {
             if (!TryGetContainingList(trivia, out SyntaxTriviaList list))

@@ -426,7 +426,7 @@ namespace Roslynator.CSharp
         #endregion DestructorDeclarationSyntax
 
         #region DirectiveTriviaSyntax
-        //TODO: make public GetNextRelatedDirective(DirectiveTriviaSyntax)
+        //TODO: Y make public GetNextRelatedDirective(DirectiveTriviaSyntax)
         internal static DirectiveTriviaSyntax GetNextRelatedDirective(this DirectiveTriviaSyntax directiveTrivia)
         {
             DirectiveTriviaSyntax d = directiveTrivia;
@@ -1767,7 +1767,7 @@ namespace Roslynator.CSharp
             return ReplaceRange(list, index, count, Empty.ReadOnlyList<TNode>());
         }
 
-        //TODO: make public TrimTrivia<TNode>(SeparatedSyntaxList<TNode>)
+        //XTODO: make public TrimTrivia<TNode>(SeparatedSyntaxList<TNode>)
         internal static SeparatedSyntaxList<TNode> TrimTrivia<TNode>(this SeparatedSyntaxList<TNode> list) where TNode : SyntaxNode
         {
             int count = list.Count;
@@ -1895,7 +1895,7 @@ namespace Roslynator.CSharp
             return statements.Any();
         }
 
-        //TODO: make public GetContainingList(StatementSyntax)
+        //XTODO: make public GetContainingList(StatementSyntax)
         internal static SyntaxList<StatementSyntax> GetContainingList(this StatementSyntax statement)
         {
             if (!TryGetContainingList(statement, out SyntaxList<StatementSyntax> list))
@@ -2327,7 +2327,7 @@ namespace Roslynator.CSharp
             return null;
         }
 
-        //TODO: make public TrimTrivia<TNode>(SyntaxList<TNode>)
+        //XTODO: make public TrimTrivia<TNode>(SyntaxList<TNode>)
         internal static SyntaxList<TNode> TrimTrivia<TNode>(this SyntaxList<TNode> list) where TNode : SyntaxNode
         {
             int count = list.Count;
@@ -3150,12 +3150,12 @@ namespace Roslynator.CSharp
             return IncreaseIndentation(trivia);
         }
 
+        //XTODO: make public ContainsUnbalancedIfElseDirectives(SyntaxNode, TextSpan)
         internal static bool ContainsUnbalancedIfElseDirectives(this SyntaxNode node)
         {
             return ContainsUnbalancedIfElseDirectives(node, node.FullSpan);
         }
 
-        //TODO: make public ContainsUnbalancedIfElseDirectives(SyntaxNode, TextSpan)
         internal static bool ContainsUnbalancedIfElseDirectives(this SyntaxNode node, TextSpan span)
         {
             if (node == null)
@@ -3200,7 +3200,7 @@ namespace Roslynator.CSharp
             return false;
         }
 
-        //TODO: make public GetFirstDirective(SyntaxNode, TextSpan, Func<DirectiveTriviaSyntax, bool>)
+        //TODO: Y make public GetFirstDirective(SyntaxNode, TextSpan, Func<DirectiveTriviaSyntax, bool>)
         internal static DirectiveTriviaSyntax GetFirstDirective(this SyntaxNode node, TextSpan span, Func<DirectiveTriviaSyntax, bool> predicate = null)
         {
             DirectiveTriviaSyntax directive = node.GetFirstDirective(predicate);
