@@ -600,7 +600,13 @@ namespace Roslynator
             return visibility;
         }
 
-        internal static bool HasMetadataName(this ISymbol symbol, in MetadataName metadataName)
+        /// <summary>
+        /// Returns true if a symbol has the specified <see cref="MetadataName"/>.
+        /// </summary>
+        /// <param name="symbol"></param>
+        /// <param name="metadataName"></param>
+        /// <returns></returns>
+        public static bool HasMetadataName(this ISymbol symbol, in MetadataName metadataName)
         {
             return metadataName.Equals(symbol);
         }
