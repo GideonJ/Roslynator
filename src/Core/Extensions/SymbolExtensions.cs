@@ -555,7 +555,6 @@ namespace Roslynator
             return true;
         }
 
-        //TODO: make public GetVisibility(ISymbol)
         internal static Visibility GetVisibility(this ISymbol symbol)
         {
             var visibility = Visibility.Public;
@@ -613,7 +612,6 @@ namespace Roslynator
         #endregion ISymbol
 
         #region IAssemblySymbol
-        //XTODO: make public GetTypes(this IAssemblySymbol assemblySymbol, Func<INamedTypeSymbol, bool> predicate = null)
         internal static ImmutableArray<INamedTypeSymbol> GetTypes(this IAssemblySymbol assemblySymbol, Func<INamedTypeSymbol, bool> predicate = null)
         {
             ImmutableArray<INamedTypeSymbol>.Builder builder = ImmutableArray.CreateBuilder<INamedTypeSymbol>();

@@ -779,8 +779,12 @@ namespace Roslynator.CSharp
             }
         }
 
-        //TODO: Y make public IsIfElseDirective(SyntaxKind kind)
-        internal static bool IsIfElseDirective(SyntaxKind kind)
+        /// <summary>
+        /// Returns true if a syntax of the specified kind is #if, #else, #elif or #endif directive.
+        /// </summary>
+        /// <param name="kind"></param>
+        /// <returns></returns>
+        public static bool IsIfElseDirective(SyntaxKind kind)
         {
             switch (kind)
             {
@@ -794,7 +798,6 @@ namespace Roslynator.CSharp
             }
         }
 
-        //XTODO: make public CSharpFacts.IsStatement(SyntaxKind kind)
         /// <summary>
         /// Returns true if a syntax of the specified kind is a statement (which includes <see cref="SyntaxKind.Block"/>).
         /// </summary>
