@@ -138,6 +138,12 @@ namespace Roslynator.CSharp
         #endregion BaseArgumentListSyntax
 
         #region BinaryExpressionSyntax
+        /// <summary>
+        /// Returns <see cref="ExpressionChain"/> that enables to enumerate expressions of a binary expression.
+        /// </summary>
+        /// <param name="binaryExpression"></param>
+        /// <param name="span"></param>
+        /// <returns></returns>
         public static ExpressionChain AsChain(this BinaryExpressionSyntax binaryExpression, TextSpan? span = null)
         {
             return new ExpressionChain(binaryExpression, span);
