@@ -222,6 +222,7 @@ namespace Roslynator.CSharp
         /// <param name="keepDocumentationCommentOnTop">If the declaration has no attribute lists and has a documentation comment the specified attribute lists will be inserted after the documentation comment.</param>
         /// <param name="attributeLists"></param>
         /// <returns></returns>
+        [Obsolete("This method is obsolete.")]
         public static ClassDeclarationSyntax AddAttributeLists(
             this ClassDeclarationSyntax classDeclaration,
             bool keepDocumentationCommentOnTop,
@@ -1075,6 +1076,7 @@ namespace Roslynator.CSharp
         /// <param name="keepDocumentationCommentOnTop">If the declaration has no attribute lists and has a documentation comment the specified attribute lists will be inserted after the documentation comment.</param>
         /// <param name="attributeLists"></param>
         /// <returns></returns>
+        [Obsolete("This method is obsolete.")]
         public static InterfaceDeclarationSyntax AddAttributeLists(
             this InterfaceDeclarationSyntax interfaceDeclaration,
             bool keepDocumentationCommentOnTop,
@@ -2024,6 +2026,7 @@ namespace Roslynator.CSharp
         /// <param name="keepDocumentationCommentOnTop">If the declaration has no attribute lists and has a documentation comment the specified attribute lists will be inserted after the documentation comment.</param>
         /// <param name="attributeLists"></param>
         /// <returns></returns>
+        [Obsolete("This method is obsolete.")]
         public static StructDeclarationSyntax AddAttributeLists(
             this StructDeclarationSyntax structDeclaration,
             bool keepDocumentationCommentOnTop,
